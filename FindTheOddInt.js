@@ -10,16 +10,27 @@
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
 function findOdd(A) {
-  const sortList =  A.sort((element_1, element_2) => element_1 - element_2)
-  let carry = 0
-  return sortList.find((element, index) => {
-    if (index === 0) carry ++
+  if (A.length === 1) return A[0];
+  const sortList = A.sort((element_1, element_2) => element_1 - element_2);
+  let carry = 0;
+  let result = 0;
+  sortList.find((element, index) => {
+    if (index === 0) carry++;
     else {
-        if(element === sortList[index - 1]) carry ++
-        else if(carry % 2 !== 0) return true
-        else carry = 1
+      if (element === sortList[index - 1]) carry++;
+      else if (carry % 2 !== 0) {
+        result = sortList[index - 1];
+        return true;
+      } else carry = 1;
+      if (index === sortList.length - 1) {
+        if (carry % 2 !== 0) {
+          result = sortList[index];
+          return true;
+        }
+      }
     }
-  })
+  });
+  return result;
 }
 
-console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]))
+console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "1": "npx nodemon NarcissisticNumber.js",
-    "2": "npx nodemon FindTheOddInt.js"
+    "2": "npx nodemon FindTheOddInt.js",
+    "3": "npx nodemon FindTheParityOutlier.js"
   },
   "keywords": [],
   "author": "",
