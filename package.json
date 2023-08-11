@@ -10,7 +10,8 @@
     "3": "npx nodemon FindTheParityOutlier.js",
     "4": "npx nodemon ExesAndOhs.js",
     "5": "npx nodemon GrowthOfAPopulation.js",
-    "6": "npx nodemon HumanReadableTime.js"
+    "6": "npx nodemon HumanReadableTime.js",
+    "7": "npx nodemon Rot13.js"
   },
   "keywords": [],
   "author": "",
