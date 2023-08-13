@@ -13,7 +13,8 @@
     "6": "npx nodemon HumanReadableTime.js",
     "7": "npx nodemon Rot13.js",
     "8": "npx nodemon DuplicateEncoder.js",
-    "9": "npx nodemon DirectionsReduction.js"
+    "9": "npx nodemon DirectionsReduction.js",
+    "10": "npx nodemon RomanNumeralsHelper.js"
   },
   "keywords": [],
   "author": "",
