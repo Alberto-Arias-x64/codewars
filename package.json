@@ -14,7 +14,8 @@
     "7": "npx nodemon Rot13.js",
     "8": "npx nodemon DuplicateEncoder.js",
     "9": "npx nodemon DirectionsReduction.js",
-    "10": "npx nodemon RomanNumeralsHelper.js"
+    "10": "npx nodemon RomanNumeralsHelper.js",
+    "11": "npx nodemon PeteTheBaker.js"
   },
   "keywords": [],
   "author": "",
