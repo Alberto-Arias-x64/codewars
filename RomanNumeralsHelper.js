@@ -28,7 +28,7 @@
 // "XL"      -> 40
 // "I"       -> 1
 
-const dic = {
+/* const dic = {
     M: 1000,
     D: 500,
     C: 100,
@@ -84,4 +84,57 @@ class RomanNumerals {
     }
 }
 
-console.log(RomanNumerals.toRoman(9))
+console.log(RomanNumerals.toRoman(9)) */
+
+/* function decimalToRoman(decimal) {
+    if (decimal <= 0) return false
+    if (decimal >= 4000) return false
+
+    const romanThousands = ['', 'M', 'MM', 'MMM'];
+    const romanOnes = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+    const romanTens = ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
+    const romanHundreds = ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
+
+    const romanInteger = romanThousands[Math.floor(decimal / 1000)] +
+        romanHundreds[Math.floor((decimal % 1000) / 100)] +
+        romanTens[Math.floor((decimal % 100) / 10)] +
+        romanOnes[decimal % 10]
+
+    return romanInteger
+}
+
+console.log(decimalToRoman(1234))
+console.log(decimalToRoman(2019))
+console.log(decimalToRoman(0))
+console.log(decimalToRoman(4000)) */
+
+class RomanNumerals {
+
+    static toRoman(num) {
+        if (num <= 0) return false
+        if (num >= 4000) return false
+
+        const romanThousands = ['', 'M', 'MM', 'MMM'];
+        const romanOnes = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+        const romanTens = ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
+        const romanHundreds = ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
+
+        const romanInteger = romanThousands[Math.floor(num / 1000)] +
+            romanHundreds[Math.floor((num % 1000) / 100)] +
+            romanTens[Math.floor((num % 100) / 10)] +
+            romanOnes[num % 10]
+
+        return romanInteger
+    }
+
+    static fromRoman(str) {
+        for (let index = 1; index < 4000; index++) {
+            if(this.toRoman(index) === str){
+                return index
+            }
+        }
+        return false
+    }
+}
+
+console.log(RomanNumerals.fromRoman(''))
