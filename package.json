@@ -16,7 +16,8 @@
     "9": "npx nodemon DirectionsReduction.js",
     "10": "npx nodemon RomanNumeralsHelper.js",
     "11": "npx nodemon PeteTheBaker.js",
-    "12": "npx nodemon PickPeaks.js"
+    "12": "npx nodemon PickPeaks.js",
+    "13": "npx nodemon MovingZerosToTheEnd.js"
   },
   "keywords": [],
   "author": "",
