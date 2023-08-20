@@ -18,7 +18,8 @@
     "11": "npx nodemon PeteTheBaker.js",
     "12": "npx nodemon PickPeaks.js",
     "13": "npx nodemon MovingZerosToTheEnd.js",
-    "14": "npx nodemon DoubleChar.js"
+    "14": "npx nodemon DoubleChar.js",
+    "15": "npx nodemon int32toIPv4.js"
   },
   "keywords": [],
   "author": "",
