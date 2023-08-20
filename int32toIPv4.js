@@ -20,24 +20,35 @@
 function int32ToIp(int32) {
     let binary = ''
     while (int32 > 0) {
-        const int = int32 / 2
         const module = int32 % 2
         binary += module ? "1" : "0"
-        int32 = module ? (int32 - 1) / 2 : int
+        int32 = module ? (int32 - 1) / 2 : int32 / 2
         if (int32 === 1) {
             binary += "1"
             break
         }
     }
     if (binary.length < 32) {
-        console.log(binary.length)
         const arrLength = 32 - binary.length
         for (let index = 0; index < arrLength; index++) {
             binary += "0"
         }
     }
+    const toDecimal = (num) => {
+        let result = 0
+        Array.from(num).forEach((element, index) => {
+            if (element == 1) {
+                result += Math.pow(2, 8 - index)
+            }
+        })
+        return result / 2
+    }
     const array = Array.from(binary).reverse().join(', ').replace(/,\s/gm, '')
-    return array
+    const first = array.slice(0, 8)
+    const second = array.slice(8, 16)
+    const third = array.slice(16, 24)
+    const four = array.slice(24, 32)
+    return `${toDecimal(first)}.${toDecimal(second)}.${toDecimal(third)}.${toDecimal(four)}`
 }
 
-console.log(int32ToIp(2))
+console.log(int32ToIp(32))
