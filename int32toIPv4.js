@@ -7,7 +7,8 @@
 // 3rd octet 10 has the binary representation: 00001010
 // 4th octet 1 has the binary representation: 00000001
 // So 128.32.10.1 == 10000000.00100000.00001010.00000001
-//                   10000000010010000000000100000000001
+//                   10000000 00100000 00001010 00000001
+//                   10000000 00011000 00000001 10011000 00000011
 
 // Because the above IP address has 32 bits, we can represent it as the unsigned 32 bit number: 2149583361
 
@@ -23,10 +24,16 @@ function int32ToIp(int32) {
     while (int32 > 0) {
         const int = int32 / 2
         const module = int32 % 2
-        binary += module
-        int32 = int === 1 ? "0" : int32
+        binary += module ? "1" : "0"
+        if (module !== 0) int32 = int32 - 1 / 2
+        else int32 = int
+        if (int32 === 1) {
+            binary += "1"
+            break
+        }
     }
-    return binary
+    const array = Array.from(binary).reverse().join(', ').replace(/,\s/gm, '')
+    return array
 }
 
 console.log(int32ToIp(2149583361))
