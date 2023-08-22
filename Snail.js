@@ -12,7 +12,46 @@
 // snail(array) #=> [1,2,3,4,5,6,7,8,9]
 
 snail = function (array) {
-    caches[array] = caches[array] || []
+    const rest = []
+    const horizontal = array[0].length
+    const vertical = array.length
+    let counter = 0
+    let x = [0, 0, horizontal - 1]
+    let y = [0, 0, vertical - 1]
+    let dir = "E"
+    while (counter < horizontal * vertical) {
+        rest.push(array[y[0]][x[0]])
+        if (dir === "E") {
+            if (x[0] === x[2]) {
+                dir = "S"
+                y[0]++
+            }
+            else x[0]++
+        }
+        else if (dir === "S") {
+            if (y[0] === y[2]) {
+                dir = "W"
+                x[0]--
+            }
+            else y[0]++
+        }
+        else if (dir === "W") {
+            if (x[0] === x[1]) {
+                dir = "N"
+                y[0]--
+            }
+            else x[0]--
+        }
+        else if (dir === "N") {
+            if (y[0] === y[1]) {
+                dir = "E"
+                x[0]++
+            }
+            else y[0]--
+        }
+        counter++
+    }
+    return rest
 }
 
-console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
+console.log(snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
