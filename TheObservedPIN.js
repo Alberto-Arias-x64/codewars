@@ -44,12 +44,11 @@ function getPINs(observed) {
         counter[index] = 0
         counterLimiter[index] = element.length - 1
     })
-    while (true) {
+    while (JSON.stringify(counter) !== JSON.stringify(counterLimiter)) {
         let res = ''
         counter.forEach((element, index) => {
             res += carry[index][element]
         })
-        if (res.includes('undefined')) return response
         response.push(res)
         for (let index = 0; index < carry.length; index++) {
             if (index === 0) {
@@ -57,22 +56,24 @@ function getPINs(observed) {
                     counter[0] = 0
                     if (counter[1] !== undefined) {
                         counter[1]++
-                        break
                     }
-                    if (counter[1] === undefined) return response
                 }
                 else counter[0]++
             }
-            else if (counter[index] === counterLimiter[index]) {
+            else if (counter[index] > counterLimiter[index]) {
                 counter[index] = 0
                 if (counter[index + 1] !== undefined) {
                     counter[index + 1]++
-                    break
                 }
-                if(counter[index + 1] === undefined) return response
             }
         }
     }
+    let res = ''
+    counter.forEach((element, index) => {
+        res += carry[index][element]
+    })
+    response.push(res)
+    return response
 }
 
-console.log(getPINs("11"))
+console.log(getPINs("80"))
