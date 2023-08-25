@@ -36,7 +36,6 @@ function getPINs(observed) {
     let counter = []
     let counterLimiter = []
     let response = []
-    let Wcounter = 0
     const dic = [[0, 8], [1, 2, 4], [2, 1, 3, 5], [3, 2, 6], [4, 1, 5, 7], [5, 2, 4, 6, 8], [6, 3, 5, 9], [7, 4, 8], [8, 0, 5, 7, 9], [9, 6, 8]]
     Array.from(`${observed}`).forEach(element => {
         carry.push(dic[element])
@@ -45,22 +44,35 @@ function getPINs(observed) {
         counter[index] = 0
         counterLimiter[index] = element.length - 1
     })
-    while (Wcounter < 10) {
+    while (true) {
         let res = ''
         counter.forEach((element, index) => {
             res += carry[index][element]
         })
-        for (let index = 0; index < counter.length; index++) {
-            if (counter[index] === counterLimiter[index]) {
+        if (res.includes('undefined')) return response
+        response.push(res)
+        for (let index = 0; index < carry.length; index++) {
+            if (index === 0) {
+                if (counter[0] === counterLimiter[0]) {
+                    counter[0] = 0
+                    if (counter[1] !== undefined) {
+                        counter[1]++
+                        break
+                    }
+                    if (counter[1] === undefined) return response
+                }
+                else counter[0]++
+            }
+            else if (counter[index] === counterLimiter[index]) {
                 counter[index] = 0
-                counter[index + 1]++
+                if (counter[index + 1] !== undefined) {
+                    counter[index + 1]++
+                    break
+                }
+                if(counter[index + 1] === undefined) return response
             }
         }
-        response.push(res)
-        counter[0]++
-        Wcounter++
     }
-    return response
 }
 
-console.log(getPINs(85))
+console.log(getPINs("11"))
