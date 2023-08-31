@@ -47,4 +47,4 @@ function simplify(poly) {
     return list
 }
 
-console.log(simplify('3x-yx+2yx-x'))
+console.log(simplify('3x-yx+2yx-x-y-x-y-x'))
