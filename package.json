@@ -23,7 +23,9 @@
     "16": "npx nodemon Snail.js",
     "17": "npx nodemon TheObservedPIN.js",
     "18": "npx nodemon SimplifyingMultilinealPolynomials.js",
-    "19": "npx nodemon AlienDictionary.js"
+    "19": "npx nodemon AlienDictionary.js",
+    "20": "npx nodemon MergeTwoSortedLists.js",
+    "21": "npx nodemon ContainerWithMostWater.js"
   },
   "keywords": [],
   "author": "",
