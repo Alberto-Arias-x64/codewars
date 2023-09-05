@@ -22,7 +22,8 @@
     "15": "npx nodemon int32toIPv4.js",
     "16": "npx nodemon Snail.js",
     "17": "npx nodemon TheObservedPIN.js",
-    "18": "npx nodemon SimplifyingMultilinealPolynomials.js"
+    "18": "npx nodemon SimplifyingMultilinealPolynomials.js",
+    "19": "npx nodemon AlienDictionary.js"
   },
   "keywords": [],
   "author": "",
