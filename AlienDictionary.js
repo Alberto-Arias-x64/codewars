@@ -26,9 +26,8 @@ function alienDictionary(wordsArray, dictionary) {
             else return true
         }
     }
-    for (let index = 0; index < wordsArray.length; index++) {
-        if (index === 0) { }
-        else if (!comparer(wordsArray[index - 1], wordsArray[index])) return false
+    for (let index = 1; index < wordsArray.length; index++) {
+        if (!comparer(wordsArray[index - 1], wordsArray[index])) return false
     }
     return true
 }
