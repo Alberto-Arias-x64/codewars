@@ -26,7 +26,8 @@
     "19": "npx nodemon AlienDictionary.js",
     "20": "npx nodemon MergeTwoSortedLists.js",
     "21": "npx nodemon ContainerWithMostWater.js",
-    "22": "npx nodemon TrappingRainWater.js"
+    "22": "npx nodemon TrappingRainWater.js",
+    "23": "npx nodemon LongestSubstringWithoutRepeatingCharacters.js"
   },
   "keywords": [],
   "author": "",
