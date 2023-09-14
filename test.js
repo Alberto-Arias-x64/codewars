@@ -80,3 +80,24 @@ const inputPolynomial = "3x^2 + 2x + 5 - x^2 + 4x^3 + x^2";
 const simplified = simplifyPolynomial(inputPolynomial);
 console.log("Polinomio original:", inputPolynomial);
 console.log("Polinomio simplificado:", simplified);
+
+
+function XO(str) {
+    // Convierte la cadena a minúsculas para que sea insensible a mayúsculas y minúsculas
+    const lowercaseStr = str.toLowerCase();
+  
+    // Cuenta el número de 'x's y 'o's en la cadena
+    const countX = lowercaseStr.split('x').length - 1;
+    const countO = lowercaseStr.split('o').length - 1;
+  
+    // Compara el número de 'x's y 'o's y devuelve true si son iguales, de lo contrario, devuelve false
+    return countX === countO;
+  }
+  
+  // Ejemplos de uso
+  console.log(XO("ooxx"));     // true
+  console.log(XO("xooxx"));    // false
+  console.log(XO("ooxXm"));    // true
+  console.log(XO("zpzpzpp"));  // true
+  console.log(XO("zzoo"));     // false
+  
