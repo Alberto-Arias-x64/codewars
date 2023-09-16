@@ -28,7 +28,8 @@
     "21": "npx nodemon ContainerWithMostWater.js",
     "22": "npx nodemon TrappingRainWater.js",
     "23": "npx nodemon LongestSubstringWithoutRepeatingCharacters.js",
-    "24": "npx nodemon test.js"
+    "24": "npx nodemon test.js",
+    "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
   "author": "",
