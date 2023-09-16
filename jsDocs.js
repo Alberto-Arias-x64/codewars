@@ -1,7 +1,7 @@
 // @ts-check
 "use strict"
 
-import utils from "nodemon/lib/utils"
+//import utils from "nodemon/lib/utils"
 
 /** @type {string} */
 let word
@@ -36,11 +36,15 @@ class nepe {
         this.value = 0
         this.name = carName
     }
+    lego (params) {
+        return params
+    }
 }
 
 const carro = new nepe('ss')
 
 console.log(carro.name)
+console.log(carro.lego('tres'))
 
 function names (params) {
     return (param_2) => {
