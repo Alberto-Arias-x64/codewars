@@ -32,11 +32,11 @@ const getPerson = (id) => {
 
 
 class nepe {
-    constructor(carName = ''){
+    constructor(carName = '') {
         this.value = 0
         this.name = carName
     }
-    lego (params) {
+    lego(params) {
         return params
     }
 }
@@ -46,10 +46,24 @@ const carro = new nepe('ss')
 console.log(carro.name)
 console.log(carro.lego('tres'))
 
-function names (params) {
+function names(params) {
     return (param_2) => {
         return params + param_2
     }
 }
 
 console.log(names(2)(3))
+
+const moneyBox = () => {
+    let monedas = 0
+    const count = (money) => {
+        monedas += money
+        console.log(monedas)
+    }
+    return count
+}
+
+const plata = moneyBox()
+
+plata(6)
+plata(10)
