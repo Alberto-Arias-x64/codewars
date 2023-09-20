@@ -69,17 +69,3 @@ plata(6)
 plata(10)
 
 console.log(names(2)(3))
-
-const moneyBox = () => {
-    let monedas = 0
-    const count = (money) => {
-        monedas += money
-        console.log(monedas)
-    }
-    return count
-}
-
-const plata = moneyBox()
-
-plata(6)
-plata(10)
