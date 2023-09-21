@@ -52,6 +52,10 @@ function names(params) {
     }
 }
 
+/**
+ * @author simio
+*/
+
 console.log(names(2)(3))
 
 const moneyBox = () => {
