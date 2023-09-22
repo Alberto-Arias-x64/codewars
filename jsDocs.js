@@ -71,5 +71,6 @@ const plata = moneyBox()
 
 plata(6)
 plata(10)
+plata(20)
 
 console.log(names(2)(3))
