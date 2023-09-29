@@ -30,6 +30,7 @@
     "23": "npx nodemon LongestSubstringWithoutRepeatingCharacters.js",
     "24": "npx nodemon test.js",
     "25": "npx nodemon unluckyDays.js",
+    "26": "npx nodemon DecodeTheMorseCode.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
