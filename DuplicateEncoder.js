@@ -32,3 +32,4 @@ function duplicateEncode(word){
 }
 
 console.log(duplicateEncode('(( @'));
+console.log(duplicateEncode('(( @ ))'));
