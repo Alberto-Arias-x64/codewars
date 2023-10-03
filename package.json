@@ -32,6 +32,7 @@
     "25": "npx nodemon unluckyDays.js",
     "26": "npx nodemon DecodeTheMorseCode.js",
     "27": "npx nodemon SearchInRotatedArrays.js",
+    "28": "npx nodemon Search2dArray.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
