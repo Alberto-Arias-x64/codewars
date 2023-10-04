@@ -33,9 +33,14 @@ function permutations(string = '') {
             map.push(letter + permutationsRest[j]);
         }
     }
-    const response = new Set()
-    map.forEach(element => response.add(element))
-    return response
+    return map
 }
 
-console.log(permutations('abc'))
+function permutations_complement (string = '') {
+    const middle = new Set(permutations(string))
+    const rest = []
+    middle.forEach(element => rest.push(element))
+    return rest
+}
+
+console.log(permutations_complement('abc'))
