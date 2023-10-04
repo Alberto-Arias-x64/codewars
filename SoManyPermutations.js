@@ -43,4 +43,4 @@ function permutations_complement (string = '') {
     return rest
 }
 
-console.log(permutations_complement('abc'))
+console.log(permutations_complement('abcsw'))
