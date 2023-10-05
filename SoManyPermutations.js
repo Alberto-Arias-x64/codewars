@@ -19,28 +19,26 @@
 
 // Good luck!
 
-function permutations(string = '') {
-    if (string.length === 1) {
-        return [string];
-    }
-    const map = []
-    for (var i = 0; i < string.length; i++) {
-        let letter = string[i];
-        let rest = string.slice(0, i) + string.slice(i + 1);
-        let permutationsRest = permutations(rest);
-
-        for (var j = 0; j < permutationsRest.length; j++) {
-            map.push(letter + permutationsRest[j]);
+function permutations(stringStart) {
+    function per(string) {
+        if (string.length === 1) {
+            return [string];
         }
+        const map = []
+        for (var i = 0; i < string.length; i++) {
+            let letter = string[i];
+            let rest = string.slice(0, i) + string.slice(i + 1);
+            let permutationsRest = permutations(rest);
+    
+            for (var j = 0; j < permutationsRest.length; j++) {
+                map.push(letter + permutationsRest[j]);
+            }
+        }
+        return map
     }
-    return map
-}
-
-function permutations_complement (string = '') {
-    const middle = new Set(permutations(string))
+    const middle = new Set(per(stringStart))
     const rest = []
     middle.forEach(element => rest.push(element))
     return rest
 }
-
-console.log(permutations_complement('abcsw'))
+console.log(permutations('abccs'))
