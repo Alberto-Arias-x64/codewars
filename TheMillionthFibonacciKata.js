@@ -35,8 +35,17 @@
 
 // HINT II: See https://web.archive.org/web/20220614001843/https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_sec_1.2.4
 
+let res = 0
+
 function fib(n) {
-    return 0n;
+    if (n <= 1) {
+        return n;
+    } else {
+        return fib(n - 1) + fib(n - 2);
+    }
 }
 
-console.log(fib(4))
+
+console.time('work')
+console.log(fib(44))
+console.timeEnd('work')
