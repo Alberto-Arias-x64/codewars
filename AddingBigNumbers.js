@@ -46,6 +46,7 @@ function add(a, b) {
     return '' + response.reduce((acc,element) => acc += `${element}`)
 }
 
+
 // console.log(add("1", "1")) //"2"
 // console.log(add("123", "456")) //"579"
 // console.log('response ' + add("888", "222")) //"1110"
