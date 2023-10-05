@@ -34,6 +34,7 @@
     "27": "npx nodemon SearchInRotatedArrays.js",
     "28": "npx nodemon Search2dArray.js",
     "29": "npx nodemon SoManyPermutations.js",
+    "30": "npx nodemon AddingBigNumbers.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
