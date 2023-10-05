@@ -28,10 +28,10 @@ function permutations(stringStart) {
         for (var i = 0; i < string.length; i++) {
             let letter = string[i];
             let rest = string.slice(0, i) + string.slice(i + 1);
-            let permutationsRest = permutations(rest);
+            let permutationsRest = per(rest)
     
             for (var j = 0; j < permutationsRest.length; j++) {
-                map.push(letter + permutationsRest[j]);
+                map.push(letter + permutationsRest[j])
             }
         }
         return map
@@ -41,4 +41,4 @@ function permutations(stringStart) {
     middle.forEach(element => rest.push(element))
     return rest
 }
-console.log(permutations('abccs'))
+console.log(permutations('abc'))
