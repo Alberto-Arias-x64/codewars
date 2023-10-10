@@ -44,9 +44,12 @@ function generateBC(url = '', separator = '') {
     if (parsedUrl[parsedUrl.length - 1].match(/index\.html?/gm)) parsedUrl.pop()
     for (let index = 1; index < parsedUrl.length; index++) {
         const preElement = parsedUrl[index].replace(/\.html|\.htm|\.php|\.asp/gm, '')
-        const element = preElement.replace(/-/gm, ' ')
+        let element = preElement.replace(/-/gm, ' ')
+        if (element.length >= 30){
+            element = element.split(' ').map(element => element.length > 2 ? element[0] : '').reduce((acc,element) => acc += element)
+        }
         if (index + 1 === parsedUrl.length) {
-            const cleanElement = element.replace(/#.*/gm, '')
+            const cleanElement = element.replace(/#.*|\?.*/gm, '')
             res = res.concat(separator)
             res = res.concat(lastElement(cleanElement.toUpperCase()))
         }
@@ -59,7 +62,8 @@ function generateBC(url = '', separator = '') {
     return res
 }
 
-console.log(generateBC("www.very-long-site_name-to-make-a-silly-yet-meaningful-example.com/users/giacomo-sorbi", " + "))
+console.log(generateBC('twitter.de/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/issues#bottom', ' . '))
 
-//<a href="/">HOME</a> * <a href="/important/">IMPORTANT</a> * <a href="/confidential/">CONFIDENTIAL</a> * <span class="active">DOCS</span>
-//<a href="/">HOME</a> * <a href="/important/">IMPORTANT</a> * <a href="/important/confidential/">CONFIDENTIAL</a> * <span class="active">DOCS</span>
+
+//<a href="/">HOME</a> . <a href="/wanted/">WANTED</a> . <a href="/wanted/app/">APP</a> . <a href="/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/">IKB</a> . <span class="active">ISSUES</span>
+//<a href="/">HOME</a> . <a href="/wanted/">WANTED</a> . <a href="/wanted/app/">APP</a> . <a href="/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/">IKB</a> . <span class="active">ISSUES</span> - instead got: <a href="/">HOME</a> . <a href="/wanted/">WANTED</a> . <a href="/wanted/app/">APP</a> . <a href="/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/">TIFKB</a> . <span class="active">ISSUES</span>
