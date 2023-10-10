@@ -35,7 +35,7 @@
 
 // HINT II: See https://web.archive.org/web/20220614001843/https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_sec_1.2.4
 
-let res = 0
+/* let res = 0
 
 function fib(n) {
     if (n <= 1) {
@@ -47,5 +47,35 @@ function fib(n) {
 
 
 console.time('work')
-console.log(fib(44))
+console.log(fib(45))
+console.timeEnd('work') */
+
+function fibonacci(n) {
+    let inverse = false
+    if (n <= 1 && n >= 0) {
+        if (n < 0) {
+            return BigInt(n);
+        }
+        return BigInt(n);
+    }
+    if (n < 0) {
+        n = -n
+        if (n % 2) inverse = true
+    }
+    let prev = 0;
+    let current = 1;
+
+    for (let i = 2; i <= n; i++) {
+        let next = BigInt(prev) + BigInt(current);
+        prev = current
+        current = next
+    }
+    return inverse ? -current : current
+}
+console.time('work')
+//console.log(fibonacci(1147346))
+fibonacci(1147346)
 console.timeEnd('work')
+
+//onmessage
+//postMessage
