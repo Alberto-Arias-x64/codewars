@@ -36,6 +36,7 @@
     "29": "npx nodemon SoManyPermutations.js",
     "30": "npx nodemon AddingBigNumbers.js",
     "31": "npx nodemon TheMillionthFibonacciKata.js",
+    "32": "npx nodemon CodewarsLeaderboar.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
