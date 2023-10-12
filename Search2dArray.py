@@ -37,3 +37,6 @@ print(response3)
 
 response3 = searchInMatrix(matriz, 60)
 print(response3)
+
+response3 = searchInMatrix(matriz, 59)
+print(response3)
