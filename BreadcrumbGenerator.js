@@ -63,6 +63,7 @@ function generateBC(url = '', separator = '') {
 }
 
 console.log(generateBC('twitter.de/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/issues#bottom', ' . '))
+console.log(generateBC('twitter.de/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/issues#bottom', ' . '))
 
 
 //<a href="/">HOME</a> . <a href="/wanted/">WANTED</a> . <a href="/wanted/app/">APP</a> . <a href="/wanted/app/a-the-immunity-for-to-kamehameha-biotechnology/">IKB</a> . <span class="active">ISSUES</span>
