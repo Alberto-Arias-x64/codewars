@@ -76,3 +76,4 @@ function rot13(message) {
 }
 
 console.log(rot13('Y2UC{V Nf@rI$('));
+console.log(rot13('Y2UC{V  YYNf@rI$('));
