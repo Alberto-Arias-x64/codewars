@@ -32,3 +32,4 @@ function cakes(recipe, available) {
 }
 
 console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}))
+console.log(cakes({flour: 600, sugar: 400, eggs: 2}, {flour: 1100, sugar: 1100, eggs: 5, milk: 600}))
