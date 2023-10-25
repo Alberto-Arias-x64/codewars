@@ -76,6 +76,7 @@ console.time('work')
 //console.log(fibonacci(1147346))
 fibonacci(1147346)
 console.timeEnd('work')
+console.timeEnd('work_2')
 
 //onmessage
 //postMessage
