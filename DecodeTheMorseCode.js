@@ -33,7 +33,7 @@
 
 // After you complete this kata, you may try yourself at Decode the Morse code, advanced.
 
-// Adding a comments for lucky guy
+// Adding a comments for lucky guy un regalo
 
 
 const MORSE_CODE = {
