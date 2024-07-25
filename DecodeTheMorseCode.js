@@ -33,7 +33,7 @@
 
 // After you complete this kata, you may try yourself at Decode the Morse code, advanced.
 
-// Adding a comments for lucky guy un regalo bogota santamaria boyaca muelto hubspot es una mierda
+// Adding a comments for lucky guy un regalo bogota santamaria boyaca muelto hubspot es una mierda table top
 
 
 const MORSE_CODE = {
