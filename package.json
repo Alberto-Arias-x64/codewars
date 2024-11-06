@@ -39,6 +39,7 @@
     "32": "npx nodemon CodewarsLeaderboar.js",
     "33": "npx nodemon BreadcrumbGenerator.js",
     "34": "npx nodemon HammingNumbers.js",
+    "35": "npx nodemon MatrixDeterminant.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
