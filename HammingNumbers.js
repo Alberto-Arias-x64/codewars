@@ -12,11 +12,18 @@
 // The fifth smallest Hamming number is 5 = 2^0*3^0*5^1
 // The 20 smallest Hamming numbers are given in the Example test fixture.
 
-// Your code should be able to compute the first 5 000 ( LC: 400, Clojure: 2 000, Haskell: 12 691, NASM, C, D, C++, Go and Rust: 13 282 ) 
+// Your code should be able to compute the first 5 000 ( LC: 400, Clojure: 2 000, Haskell: 12 691, NASM, C, D, C++, Go and Rust: 13 282 )
 // Hamming numbers without timing out.
 
-function hamming (n) {
-  const 
+function hamming(n) {
+  const index = [0, 0, 1]
+  const formula = (index = [0, 0, 0]) => {
+    const one = 2 ** index[0]
+    const two = 3 ** index[1]
+    const three = 5 ** index[2]
+    return one * two * three
+  }
+  return formula(index)
 }
 
 console.log(hamming(1))
