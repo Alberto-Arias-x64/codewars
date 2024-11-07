@@ -40,6 +40,7 @@
     "33": "npx nodemon BreadcrumbGenerator.js",
     "34": "npx nodemon HammingNumbers.js",
     "35": "npx nodemon MatrixDeterminant.js",
+    "36": "npx nodemon cipher.js",
     "doc": "npx nodemon jsDocs.js"
   },
   "keywords": [],
